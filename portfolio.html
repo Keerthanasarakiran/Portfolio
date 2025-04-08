@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthana Sara Kiran | Computer Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a4365;
+            --primary-dark: #1e3a8a;
+            --secondary: #4c51bf;
+            --accent: #4299e1;
+            --light: #f8fafc;
+            --dark: #1a202c;
+            --gray: #e2e8f0;
+            --dark-gray: #4a5568;
+            --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            margin-bottom: 3rem;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234299e1' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.15;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            font-size: 1.1rem;
+            color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* About Section */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(66, 153, 225, 0.4);
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent), var(--secondary));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 1rem 3rem;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .timeline-content {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-date i {
+            margin-right: 0.5rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            border-radius: 50%;
+            top: 2rem;
+            box-shadow: 0 0 0 4px white, 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+            flex: 1 1 160px;
+            min-width: 160px;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .skill-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        /* Experience & Education */
+        .exp-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+            border-left: 4px solid var(--accent);
+        }
+
+        .exp-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .exp-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .edu-item {
+            display: flex;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .edu-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .edu-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .edu-year {
+            font-weight: 600;
+            color: var(--accent);
+            min-width: 180px;
+            font-size: 1rem;
+        }
+
+        .edu-details {
+            flex: 1;
+            padding-left: 2rem;
+            border-left: 1px solid var(--gray);
+        }
+
+        .edu-institution {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .edu-marks {
+            color: var(--dark-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            color: white;
+            font-size: 1.25rem;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 4rem 0;
+                clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 4rem;
+                padding-right: 1rem;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-dot {
+                left: 21px !important;
+            }
+            
+            .edu-item {
+                flex-direction: column;
+            }
+            
+            .edu-details {
+                padding-left: 0;
+                padding-top: 1rem;
+                border-left: none;
+                border-top: 1px solid var(--gray);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            header {
+                padding: 3rem 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card, .timeline-content, .exp-item, .edu-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>KEERTHANA SARA KIRAN</h1>
+            <p class="subtitle">Computer Engineering Student</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>keerthanasarakiran@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Edacheril, Thiruvanchoor P.O, Kottayam, Kerala</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>November 16, 2005</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="card">
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hey everyone,</p>
+                        <p>I am a collector of withered words, a poet who finds beauty in the unsaid, and a computer science undergraduate passionate about solving problems through innovation.</p>
+                        <p>As a poet, I explore the human experience, giving voice to emotions and ideas. As a CS student, I dive into the intricacies of technology.</p>
+                    </div>
+                    <a href="https://www.canva.com/design/DAGeKOdiSuQ/RcJ0J59vW04hyN5djD3X0w/edit?utm_content=DAGeKOdiSuQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn" target="_blank">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="timeline">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="far fa-calendar-alt"></i> 2022-23
+                        </div>
+                        <p>Vimukthi Club is an initiative by the Kerala Excise Department in schools to prevent drug abuse and promote healthy habits. In 2022-23, I served as the Secretary of our school's Vimukthi Club, organizing awareness campaigns and activities.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="far fa-calendar-alt"></i> 2023-24
+                        </div>
+                        <p>In 2023-24, I served as the President of our school's Vimukthi Club, a Kerala Excise Department initiative against drug abuse. Leading awareness drives, workshops, and peer-education programs, I worked to foster a drug-free campus. The role strengthened my leadership and commitment to social causes.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="far fa-calendar-alt"></i> 2021-22
+                        </div>
+                        <p>Volunteered for a program led by Indian Tourism Department.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="far fa-calendar-alt"></i> 2024
+                        </div>
+                        <p>Participated in Smart India Hackathon, NASA Global App Development Challenge, Young Innovators Programme 7.0 under Govt. of Kerala, and was part of content team for Nova 4.0.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>Professional Experience</h2>
+            </div>
+            <div class="exp-item">
+                <p>Successfully completed a 40-hour internship focused on Computer Hardware and Networking organized by LBS Centre For Science and Technology (Government Of Kerala Undertaking).</p>
+            </div>
+            
+            <div class="exp-item">
+                <p>Successfully participated in made-in-India innovation with Indigenous Vega Processor using Arduino which was a Hands-on experience.</p>
+            </div>
+            
+            <div class="exp-item">
+                <p>Successfully participated in ESP32 workshop using Arduino.</p>
+            </div>
+            
+            <div class="exp-item">
+                <p>Successfully participated in a cybersecurity workshop organized by Mulearn.</p>
+            </div>
+            
+            <div class="exp-item">
+                <p>Successfully participated in a workshop called 'Ideas To Impact' based on Entrepreneurship journey.</p>
+            </div>
+            
+            <div class="exp-item">
+                <p>Successfully participated and volunteered in INSPERIA 3.0.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="edu-item">
+                <div class="edu-year">2013 - 2022</div>
+                <div class="edu-details">
+                    <div class="edu-institution">Kendriya Vidyalaya, Kottayam</div>
+                    <div class="edu-marks">93%</div>
+                </div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-year">2022 - Present</div>
+                <div class="edu-details">
+                    <div class="edu-institution">Mount Carmel Higher Secondary School, Kottayam</div>
+                    <div class="edu-marks">Class XII (Kerala State Syllabus) - 98.9%</div>
+                    <div class="edu-marks">Subject Topper in Mathematics, Biology, Chemistry (Scoring full marks-120/120)</div>
+                </div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-year">2024 - 2028</div>
+                <div class="edu-details">
+                    <div class="edu-institution">LBS Institute Of Technology For Girls, Trivandrum</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills & Expertise</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-name">Project Management</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">Leadership</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">Technical Writing</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">Public Speaking</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-name">Engineering</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="awards">
+        <div class="container">
+            <div class="section-title">
+                <h2>Awards & Honors</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-trophy"></i> November 2021
+                        </div>
+                        <p>State level essay writing competition A grade held at Idukki, Kerala</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-trophy"></i> November 2022
+                        </div>
+                        <p>State level essay writing competition A grade held at Kasargod, Kerala</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fas fa-trophy"></i> 2024
+                        </div>
+                        <p>Special mention in hackathon held by Mar Baselious College, Trivandrum and was awarded a cash prize of Rs.1000</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>Let's Connect</h3>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Keerthana Sara Kiran. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all animated elements
+            const animatedElements = document.querySelectorAll(
+                '.section-title, .timeline-item, .skill-card, .exp-item, .edu-item'
+            );
+            
+            animatedElements.forEach((el, index) => {
+                // Add delay based on index for staggered animation
+                if (el.classList.contains('skill-card')) {
+                    el.style.transitionDelay = `${index * 0.1}s`;
+                }
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
